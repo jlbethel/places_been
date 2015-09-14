@@ -38,9 +38,9 @@ $(document).ready(function () {
       $("#show-place h2").text(newPlace.placeName);
       $(".landmarks").text(newPlace.landmark);
       $(".season").text(newPlace.season);
+      $("ul#notes").text("");
       newPlace.note.forEach(function(note) {
         $("ul#notes").append("<li>" + note.observation + "</li>");
-        debugger;
       });
     });
 
