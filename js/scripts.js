@@ -3,7 +3,7 @@ $(document).ready(function () {
     if ($(this).find('input').val().length >= 1) {
       $("#new-notes").append('<div class="new-note">' +
                               '<div class="form-group">' +
-                              '<input type="text" class="form-control one-note" placeholder="Add note">' +
+                              '<input type="text" class="form-control extra-input one-note" placeholder="Add note">' +
                               '</div>' +
                               '</div>');
     }
@@ -48,5 +48,6 @@ $(document).ready(function () {
     $("input#landmarks").val("");
     $("input#season").val("");
     $("input.one-note").val("");
+    $(".extra-input").remove();
   });
 });
