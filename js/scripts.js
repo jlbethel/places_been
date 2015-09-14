@@ -18,12 +18,16 @@ $(document).ready(function () {
     var newPlace = { placeName: inputtedName, landmark: inputtedLandmark, season: inputtedSeason, note: []
     };
 
-  $(".new-note").each(function() {
-    var inputtedNote = $(this).find("input.one-note").val();
+    $(".new-note").each(function() {
+      if ($(this).find("input.one-note").val().length >=1) {
+        var inputtedNote = $(this).find("input.one-note").val();
 
-    var newNote = { observation: inputtedNote };
-    newPlace.note.push(newNote);
-  });
+        var newNote = { observation: inputtedNote };
+        newPlace.note.push(newNote);
+
+      }
+
+    });
 
 
     $("ul#places").append("<li><span class='place'>" + newPlace.placeName + "</span></li>");
