@@ -1,4 +1,21 @@
 $(document).ready(function () {
+  $("#new-notes input").on('change', function() {
+    if ($(this).val().length >= 1) {
+      $("#new-notes").append('<div class="form-group">' +
+                              '<input type="text" class="form-control one-note" placeholder="Add note">' +
+                              '</div>');
+    }
+    alert("its works");
+  });
+  // $("input.notes").change('input', function() {
+    // if ($(this).val().length >= 1) {
+    //   $("#new-notes").append('<div class="form-group">' +
+    //                           '<input type="text" class="form-control notes" placeholder="Add note">' +
+    //                           '</div>');
+    // }
+  //   alert("Hi");
+  // });
+                            //no class nane for new note
   $("form#new-place").submit(function(event) {
     event.preventDefault();
 
@@ -24,6 +41,6 @@ $(document).ready(function () {
     $("input#name").val("");
     $("input#landmarks").val("");
     $("input#season").val("");
-    $("input#notes").val("");
+    $("input.notes").val("");
   });
 });
